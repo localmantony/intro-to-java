@@ -7,7 +7,7 @@ class ForCountEven {
     Scanner input = new Scanner(System.in);
     int evenCount = 0;
 
-    System.out.println("Enter numbers separated by commas. I'll tell you how many even numbers you enter. ");
+    System.out.println("Enter numbers separated by commas. I'll tell you how many even numbers you entered, along with each number multiplied by three.");
     String userInput = input.nextLine();
 
     String[] numberStrings = userInput.split(",");
@@ -24,5 +24,11 @@ class ForCountEven {
     }
     System.out.print("The array " + numbers.toString() + " ");
     System.out.println("contains " + evenCount + " even values.");
+
+    for (int num : numbers) {
+      System.out.println(num + " * 3 = " + num * 3);
+    }
+    
   }
+
 }
