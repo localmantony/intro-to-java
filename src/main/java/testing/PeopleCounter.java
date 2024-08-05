@@ -1,17 +1,19 @@
 public class PeopleCounter {
+  
   private long count = 0;
 
-  //default constructor with no parameters
+
+  //default parameterless, count will have value above
   public PeopleCounter() {}
-  
-  //constructor with parameters, passing variables will override initial value of count. Constructors may look similar to methods, but constructors do not have a return type.
+
+
+  //parameterized, count will have value passed
   public PeopleCounter(long count) {
     this.count = count;
   }
 
-  public void anotherOne() {
+  public void anotherOne {
     count++;
-    System.out.println("So far " + count);
+    System.out.println("So far: " + count);
   }
-  
 }
