@@ -15,14 +15,12 @@ public class Member {
   public String getFirstName() {
     return firstName;
   }
+
   public String getLastName() {
-  return lastName;
-  }
-  public LocalDate getExpiryDate() {
-    return expiryDate;
+    return lastName;
   }
 
-  public String getStatus() {
-    return firstName + " " + lastName + " is a Member.";
+  public LocalDate getExpiryDate() {
+    return expiryDate;
   }
 }
