@@ -1,7 +1,16 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Game{
-  public static void play() {
+  
+  public boolean hitOrMiss(int accuracy) {
+    Random random = new Random();
+    int randomNumber = random.nextInt(100) + 1;
+    return accuracy > randomNumber;
+  
+  }
+  
+  public void play() {
     Scanner input = new Scanner(System.in);
     
     int playerHealth = 100;

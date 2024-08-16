@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
-public class main{
+public class Main{
   public static void main(String[] args) {
-    MainMenu startingMenu = new 
-    MainMenu.callMainMenu();
+    MainMenu mainMenu = new 
+    MainMenu();
+    mainMenu.callMainMenu();
   }
 }
