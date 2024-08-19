@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class Game{
+public class Game {
   
   public boolean hitOrMiss(int accuracy) {
     Random random = new Random();
@@ -10,7 +10,7 @@ public class Game{
   
   }
   
-  public void play() {
+  public void play(Player player, int difficulty) {
     Scanner input = new Scanner(System.in);
     
     int playerHealth = 100;
@@ -51,5 +51,9 @@ public class Game{
         break;
       }
     }
+  }
+
+  public void initializeEnemies(int difficulty) {
+    int difPool = difficulty;
   }
 }

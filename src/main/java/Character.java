@@ -1,28 +1,16 @@
 public class Character {
-  private String name;
-  private int atkDamage;
-  private int health;
-  private int accuracy;
-
-
-  public Character(String name, int difficulty, int atkDamage, int health) {
+  protected String name;
+  protected int health;
+  protected int accuracy;
+  
+  public Character(String name, int health, int accuracy) {
     this.name = name;
-    this.difficulty = difficulty;
-    this.atkDamage = atkDamage;
     this.health = health;
     this.accuracy = accuracy;
   }
 
   public String getName() {
     return name;
-  }
-
-  public int getDifficulty() {
-    return difficulty;
-  }
-
-  public int getAtkDamage() {
-    return atkDamage;
   }
 
   public int getHealth() {
@@ -33,6 +21,18 @@ public class Character {
     return accuracy;
   }
 
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setHealth(int health) {
+    this.health = health;
+  }
+
+  public void setAccuracy(int accuracy) {
+    this.accuracy = accuracy;
+  }
+  
   public void loseHealth(int amount) {
     health -= amount;
   }
