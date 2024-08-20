@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
+import java.util.ArrayList;
 
 public class Game {
   
@@ -51,9 +52,5 @@ public class Game {
         break;
       }
     }
-  }
-
-  public void initializeEnemies(int difficulty) {
-    int difPool = difficulty;
   }
 }

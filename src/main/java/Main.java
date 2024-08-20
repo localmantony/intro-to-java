@@ -23,9 +23,11 @@ public class Main {
     Player player1 = new Player("Player 1", defaultWeapons);
     
     MainMenu mainMenu = new MainMenu();
+    MainMenu.clear();
     System.out.println("\nWelcome to the Battle Arena");
-    System.out.println("\nPress Enter to Launch the Main Menu.");
+    System.out.println("\nPress Enter to Launch the Main Menu.\n");
     scanner.nextLine();
+    MainMenu.clear();
       
     mainMenu.callMainMenu(player1, primaryWeapons, tacticalWeapons);
     

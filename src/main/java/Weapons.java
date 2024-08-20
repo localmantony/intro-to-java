@@ -37,7 +37,7 @@ public class Weapons {
       lifespan -= 1;
   }
   
-  public void display() {
+  public void displayWeapon() {
     System.out.println("Name: " + name);
     System.out.println("Attack Damage: " + atkDamage);
     System.out.println("Speed (Uses per turn): " + speed);
