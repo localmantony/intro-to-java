@@ -5,16 +5,19 @@ public class Enemy extends Character {
   public Enemy(String name, int health, int accuracy, int atkDamage, int difficulty) {
     super(name, health, accuracy);
     this.atkDamage = atkDamage;
-    this.accuracy = accuracy;
     this.difficulty = difficulty;
+  }
+
+  public int getDifficulty() {
+    return difficulty;
   }
 
   public int getAtkDamage() {
     return atkDamage;
   }
 
-  public int getDifficulty() {
-    return difficulty;
+  public void increaseAttack(int amount) {
+    atkDamage += amount;
   }
 
   public void displayEnemy() {

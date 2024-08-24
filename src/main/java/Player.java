@@ -1,5 +1,7 @@
 public class Player extends Character {
   protected Weapons[] weapons = new Weapons[2];
+  protected Weapons activeWeapon;
+  
   
   public Player(String name, Weapons[] weapons) {
     super(name, 100, 90);  // health and accuracy set to 100 and 90
@@ -12,6 +14,14 @@ public class Player extends Character {
   
   public void setWeapon2(Weapons weapon2) {
     this.weapons[1] = weapon2;
+  }
+
+  public void setActiveWeapon(Weapons weapon) {
+    activeWeapon = weapon;
+  }
+
+  public Weapons getActiveWeapon() {
+    return activeWeapon;
   }
 
   public Weapons getWeapon1() {

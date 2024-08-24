@@ -2,7 +2,7 @@ public class Weapons {
   private String name;
   private int atkDamage;
   private int speed;  // speed is the amount of times a weapon can attack per turn
-  private int lifespan; // amount of time a weapon can be used, -1 = infinite
+  private int lifespan; // amount of times a weapon can be used, -1 = infinite
   private String description; // description of how each weapon is used
   
   public Weapons(String name, int atkDamage, int speed, int lifespan, String description) {

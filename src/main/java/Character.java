@@ -32,13 +32,9 @@ public class Character {
   public void setAccuracy(int accuracy) {
     this.accuracy = accuracy;
   }
-  
-  public void loseHealth(int amount) {
-    health -= amount;
-  }
 
   
-  public void attack(Character target, int atkDamage) {
-    target.loseHealth(atkDamage);
+  public void attack(Character target, int atk) {
+    target.setHealth(target.getHealth() - atk);
   }
 }
