@@ -1,0 +1,27 @@
+(done) input validation on enemy choices
+
+(done) end game behavior on enemy loss still brings up enemy turn
+
+(done) add new line before all "return to previous" options
+
+(done) add "return to" for all menu options
+
+(done) tell user to full screen or expand window for best experience
+
+(done) set bow damage to 30
+(done) increase warden health to 90
+(done) edit smoke description
+
+(done) ensure changes took effect in main menu
+
+(done) compile warden, game
+
+(done) add "Press Enter to continue to ConsoleMethods"
+(done) compile Console Methods
+
+
+
+(doing) add comments
+
+test 
+

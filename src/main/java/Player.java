@@ -1,13 +1,14 @@
 public class Player extends Character {
-  protected Weapons[] weapons = new Weapons[2];
-  protected Weapons activeWeapon;
+  protected Weapons[] weapons = new Weapons[2];  // player does not have inherent attack damage - must have weapons attached
+  protected Weapons activeWeapon;  // active weapon is chosen then used when attacking
   
-  
+  // parameterize constructor, active weapon not needed to create player, only needed in game
   public Player(String name, Weapons[] weapons) {
     super(name, 100, 90);  // health and accuracy set to 100 and 90
     this.weapons = weapons;
   }
 
+  // setters and getters - distinction between method names when getting weapon 1 and weapon 2 for clarity when caling
   public void setWeapon1(Weapons weapon1) {
     this.weapons[0] = weapon1;
   }
@@ -32,6 +33,8 @@ public class Player extends Character {
     return weapons[1];
   }
 
+
+  // display all character details at once in character editpr
   public void displayPlayer() {
     System.out.println("Name: " + name);
     System.out.println("Health: " + health);

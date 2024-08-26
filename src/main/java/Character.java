@@ -1,13 +1,18 @@
 public class Character {
+
+  // enemies and players will both have names, health, and accuracy
   protected String name;
   protected int health;
   protected int accuracy;
-  
+
+  // parameterized constructor
   public Character(String name, int health, int accuracy) {
     this.name = name;
     this.health = health;
     this.accuracy = accuracy;
   }
+
+  //getters and setters
 
   public String getName() {
     return name;
@@ -33,7 +38,8 @@ public class Character {
     this.accuracy = accuracy;
   }
 
-  
+
+  // character attacks target, use weapon atkDamage or enemy atkDamage for atk
   public void attack(Character target, int atk) {
     target.setHealth(target.getHealth() - atk);
   }
