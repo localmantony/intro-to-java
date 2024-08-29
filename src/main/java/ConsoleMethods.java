@@ -26,11 +26,12 @@ public class ConsoleMethods {
 
     // clears the shell to make viewing Menus cleaner and easier - prevents long scrolling input
     public void clear() {
+        // System.out.println("\nconsole clear here\n");      // for debugging - comment out below and uncomment this line
         try {
-            // Execute the 'clear' command on Linux/Unix/MacOS
-            new ProcessBuilder("clear").inheritIO().start().waitFor();
+            // simulates typing "clear" in the console to get rid of old input and printed text
+            new ProcessBuilder("clear").inheritIO().start().waitFor(); // inheritIO-send command, start-launch command, waitFor-wait until complete
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace();  // throws
         }
     }
 

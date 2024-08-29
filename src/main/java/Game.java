@@ -87,7 +87,6 @@ public class Game {
                   if (player.getActiveWeapon() == player.getWeapon1()) {  // if attacking with primary
                     int enemyIndex = -1;
                     boolean validEnemyChoice = false;  // initialize input validation for below loop
-                    
                     // list all enemies, await a valid input
                     while (!validEnemyChoice) {
                       System.out.println("Attack number " + (i+1) + ":\n");
@@ -96,24 +95,28 @@ public class Game {
                     
                       System.out.print("Choose a number: ");
                       
-                      if (scanner.hasNextInt()) {  // Check if the input is an integer
-                        enemyIndex = scanner.nextInt();
-                        
-                        // input is valid if within range of listed enemies
-                          if (enemyIndex > 0 && enemyIndex <= inGameEnemies.size()) {
-                              validEnemyChoice = true;
+                      String enemyInput = scanner.nextLine();
+                      
+                      if (enemyInput.isEmpty()) {  // Check if the input is blank (hit enter without typing anything)
+                        clean.inputError(inGameEnemies.size());
+                        continue;
+                      }
+
+                      if(enemyInput.matches("\\d+")) {  // check if input is an integer
+                          enemyIndex = Integer.parseInt(enemyInput);   // convert to integer type
+                          
+                          if (enemyIndex > 0 && enemyIndex <= inGameEnemies.size()) {  // input is valid if within range of listed enemies
+                            validEnemyChoice = true;
                           }
                           else {
-                             clean.inputError(inGameEnemies.size());
-                             scanner.next();
+                            clean.inputError(inGameEnemies.size());
+                            continue;
                           }
                         } 
                         else {
                           clean.inputError(inGameEnemies.size());
-                          scanner.next(); // consume the invalid input
                         }
-                    }
-                    scanner.nextLine();  // consumes the new line created by nextInt()
+                      }
                     clean.clear();       // once valid choice is true, clear console
                     Enemy chosenEnemy = inGameEnemies.get(enemyIndex - 1);  // actual index is one less than what's displayed to player
 
@@ -127,6 +130,8 @@ public class Game {
                     }
                   clean.pressEnterTo("continue");  // pause after attack and death check
                   }
+                    
+                    
                   else if (player.getActiveWeapon().getName() == "bomb") {  // if current weapon is bomb
                     for (Enemy enemy : inGameEnemies) {  // for each enemy in the game
                       player.attack(enemy, player.getActiveWeapon().getAtkDamage()); // attack with current weapon attack damage
